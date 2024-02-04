@@ -8,5 +8,5 @@ Accessing personalized health information can be challenging, and individuals of
 <b><h2>Solution:</h2><b>
 Medibot addresses these challenges by offering a user-friendly web application that combines a chatbot for health-related inquiries and an IBM calculator for personalized dietary and activity recommendations. This integration of web development and machine learning ensures a seamless and accessible platform for users to actively manage their health and make informed decisions.
 <b><h2>Domain:</h2><b>
-• Frontend Development.
+• Frontend Development.<br>
 • Machine Learning.
