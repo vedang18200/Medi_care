@@ -1,0 +1,284 @@
+﻿{% extends "base_login.html" %} {% block head %}
+
+<title> | FakeFlipper </title>
+
+{% endblock head %} {% block hero %}
+
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="A handy Calculator for calculating your BMI (Body Mass Index), that works on all Devices.">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- Icon -->
+        <link rel="shortcut icon" href="static/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32 64x64" href="img/favicon.ico">
+        <link rel="icon" type="image/png" sizes="196x196" href="static/img/favicon-192.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="static/img/favicon-160.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="static/img/favicon-96.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="static/img/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon-16.png">
+        <link rel="apple-touch-icon" href="static/img/favicon-57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="static/img/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="static/img/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="static/img/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="static/img/favicon-60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="static/img/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="static/img/favicon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="static/img/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon-180.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="img/favicon-144.png">
+        <meta name="msapplication-config" content="/browserconfig.xml">
+
+
+        <link rel="stylesheet" href="static/css/styles.css?v=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="static/css/default.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/component.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap-grid.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap-switch.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" type="text/css" href="css/fontawesome.css" > -->
+
+        <script src="static/js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/jquery.pubsub.js"></script>
+        <script src="static/js/bignumber.js"></script>
+        <script src="static/js/clipboard.js"></script>
+        <script src="static/js/cleave.js"></script>
+        <script src="static/js/bootstrap.js"></script>
+        <script src="static/js/bootstrap.bundle.js"></script>
+        <script src="static/js/bootstrap-switch.js"></script>
+
+        <script>
+
+        jQuery(document).ready( function($) {
+
+            function FilterInput(event) {
+                var keyCode = ('which' in event) ? event.which : event.keyCode;
+
+                isNotWanted = (keyCode == 50 || keyCode == 51 || keyCode == 52 || keyCode == 53 || keyCode == 54 || keyCode == 55 || keyCode == 56 || keyCode == 57 || keyCode == 98 || keyCode == 99 || keyCode == 100 || keyCode == 101 || keyCode == 102 || keyCode == 103 || keyCode == 104 || keyCode == 105 );
+                return !isNotWanted;
+            };
+
+            function handlePaste (e) {
+                var clipboardData, pastedData;
+
+                // Get pasted data via clipboard API
+                clipboardData = e.clipboardData || window.clipboardData;
+                pastedData = clipboardData.getData('Text').toUpperCase();
+
+                if(pastedData.indexOf('E')>-1) {
+                    //alert('found an E');
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            };
+            
+            // Disable scroll when focused on a number input.
+            $('form').on('focus', 'input[type=number]', function(e) {
+                $(this).on('wheel', function(e) {
+                    e.preventDefault();
+                });
+            });
+
+            // Restore scroll on number inputs.
+            $('form').on('blur', 'input[type=number]', function(e) {
+                $(this).off('wheel');
+            });
+
+            // Disable up and down keys.
+            $('form').on('keydown', 'input[type=number]', function(e) {
+                if ( e.which == 38 || e.which == 40 )
+                    e.preventDefault();
+            });  
+              
+        });
+
+        </script>
+
+        <!--[if lt IE 9]>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    
+    <body>
+        <div class="container" style="margin-top: 10%;">
+
+            <header class="col-lg-12 header">
+                <h1>BMI(Body Mass Index) Calculator </h1>
+                    <span class="col-lg-12 titleSpan"> 
+                        <ul class="col-lg-4">
+                        </ul>
+                        <ul class="col-lg-4">
+                          <li>Free interactive BMI(Body Mass Index) Calculator </li>
+                        </ul>
+                        <ul class="col-lg-4">
+                        </ul>
+                    </span>
+            </header>
+
+            <section class="color-1 col-lg-12">
+
+                <div class="jumbotron col-lg-10 offset-lg-1 optionsBox" style="display: none;">
+
+                    <div class="container optionContainer">
+                        <h1 class="display-6 h1Options">Options</h1>
+                        <hr class="my-4">
+
+                        <div class="input-group input-group-lg optionRow">
+
+                            <!-- Bit Selectbox - Start -->
+
+                            <div class="input-group mb-3 col-lg-3 leftBox">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" id="inputGroup-sizing" for="inputGroupSelectBit">Bits</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelectBit">
+                                    <!-- custom-select-lg, for bigger box -->
+                                    <option value="8" selected>8 Bit</option>
+                                    <option value="16">16 Bit</option>
+                                    <option value="32">32 Bit</option>
+                                    <!--<option value="64">64 Bit</option>-->
+                                </select>
+                            </div>
+
+                            <!-- Bit Selectbox - End -->
+                            <!-- Option Buttons - Signed/Unsigned -->
+                            
+                            <div class="input-group mb-3 offset-lg-1 col-lg-2 optionButtonsContainer" title="Signed/Unsigned Function not implemented yet.">
+                                <p class="optionButtons">
+
+                                    <!-- TODO : Signed Function -->
+
+                                    <!-- <input type="checkbox" id="switch-SignedUnsigned" disabled="disabled" data-on-text="Signed" data-off-text="Unsigned" data-on-color="success" data-off-color="danger" data-label-text="Byte" data-inverse="true"> -->
+
+                                </p>
+                            </div>
+                                
+
+                            <!-- Option Buttons - Signed/Unsigned - End-->
+                            <!-- Option Buttons - AC -->
+
+                            <div class="input-group mb-3 offset-lg-7 col-lg-1">
+                                <p class="optionButtons AC">
+                                    <button class="button button-2 button-2c" id="ACButton">AC</button>
+                                </p>
+                            </div>
+
+                            <!-- Option Buttons - AC - End -->
+                            <!-- Hexdecimal,Ternary Selectbox - Start -->
+
+                            <div class="input-group mb-3 offset-lg-1 col-lg-3 rightBox">
+                            <!--
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" id="inputGroup-sizing" for="inputGroupSelectSystem">System</label>
+                                </div>
+                            -->
+                                <select class="custom-select" id="inputGroupSelectSystem">
+                                    <option value="16" selected>Hexadecimal(16)</option> <!-- 16 -->
+                                    <option value="8">Octal(8)</option> <!-- 8 -->
+                                    <option value="4">Quaternary(4)</option> <!-- 4 -->
+                                    <option value="3">Ternary(3)</option> <!-- 3 -->
+                                </select>
+                            </div>
+
+                            <!-- Hexdecimal,Ternary Selectbox - End -->
+
+                        </div>
+                    </div>        
+                </div>
+
+                <div class="inputs" >
+
+                    <center>
+                        
+                    <!-- Input Group - Operand 1 - Start -->
+
+                    <div class="input-group outerInputDiv input-group-lg col-lg-10 offset-lg-1" style="width: 300px;">
+
+                        <div class="input-group innerInputDiv spinner col-lg-12">
+                        	<div class="input-group-prepend">
+                                <span class="input-group-text inputLabel" id="inputGroup-sizing-lg">Weight(kg)</span>
+                            </div>
+                            <input type="number" pattern="[0-9]*" onkeydown="return( FilterInput(event) || event.ctrlKey || event.altKey || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) || (95<event.keyCode && event.keyCode<106) || (event.keyCode==8) || (event.keyCode==9) || (event.keyCode>34 && event.keyCode<40) || (event.keyCode==46) )" onpaste="handlePaste(event)" class="decimalInputs form-control" id="operand1Decimal" value="72">
+                            <div class="input-group-btn-vertical">
+                                <button class="btn btn-default plus" id="operand1DecimalPlus" type="button"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default minus" id="operand1DecimalMinus" type="button"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Input Group - End -->
+                    <!-- Input Group - Operand 2 - Start -->
+                    
+
+                    <div class="input-group outerInputDiv input-group-lg col-lg-10 offset-lg-1" style="width: 300px;">
+
+                        <div class="input-group innerInputDiv spinner col-lg-12">
+                        	<div class="input-group-prepend">
+                                <span class="input-group-text inputLabel" id="inputGroup-sizing-lg">Height(cm)</span>
+                            </div>
+                            <input type="number" pattern="[0-9]*" onkeydown="return( FilterInput(event) || event.ctrlKey || event.altKey || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) || (95<event.keyCode && event.keyCode<106) || (event.keyCode==8) || (event.keyCode==9) || (event.keyCode>34 && event.keyCode<40) || (event.keyCode==46) )" onpaste="handlePaste(event)" class="decimalInputs form-control" id="operand2Decimal" value="175">
+                            <div class="input-group-btn-vertical">
+                                <button class="btn btn-default plus" id="operand2DecimalPlus" type="button"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default minus" id="operand2DecimalMinus" type="button"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Input Group - Operand 2 - End -->
+                    <!-- Input Group - Result - Start -->
+
+                    <div class="input-group outerInputDiv input-group-lg col-lg-10 offset-lg-1" style="width: 300px;">
+
+                        <div class="input-group innerInputDiv spinner col-lg-12">
+                        	<div class="input-group-prepend">
+                                <span class="input-group-text inputLabel" id="inputGroup-sizing-lg">BMI Result</span>
+                            </div>
+                            <input onClick="this.select();" type="number" pattern="[0-9]*" onkeydown="return( FilterInput(event) || event.ctrlKey || event.altKey || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) || (95<event.keyCode && event.keyCode<106) || (event.keyCode==8) || (event.keyCode==9) || (event.keyCode>34 && event.keyCode<40) || (event.keyCode==46) )" onpaste="handlePaste(event)" class="decimalInputs form-control" id="resultDecimal" value="23.51" readonly>
+                            <div class="input-group-btn-vertical">
+                                <button class="btn btn-default" id="resultCopy" type="button" data-clipboard-target="#resultDecimal"><i class="fa fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Group - Result - End -->
+
+                    <br>
+                    <br>
+
+<br>
+                    <br>
+                    
+                    <center>
+	                    <div class="bmiChartImage" >
+	                    	<img id="BMI-Underweight" class="bmiChartImageElement" src="static/img/BMI-Underweight.png" alt="BMI Body Mass Index Chart">
+	                    	<img id="BMI-Normal" class="bmiChartImageElement" src="static/img/BMI-Normal.png" alt="BMI Body Mass Index Chart">
+	                    	<img id="BMI-Overweight" class="bmiChartImageElement" src="static/img/BMI-Overweight.png" alt="BMI Body Mass Index Chart">
+	                    	<img id="BMI-Obese" class="bmiChartImageElement" src="static/img/BMI-Obese.png" alt="BMI Body Mass Index Chart">
+	                    </div>
+                    <center>
+
+                        
+                    </center>
+                </div>
+
+            </section>
+        
+          
+        </div><!-- /container -->
+
+        <script src="static/js/scripts.js"></script>
+    </body>
+</html>
+
+
+{% endblock hero %}

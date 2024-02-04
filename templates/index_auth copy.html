@@ -1,0 +1,406 @@
+{% extends "base.html" %} {% block head %}
+
+<title> | Medi-Care </title>
+
+{% endblock head %} {% block hero %}
+
+<section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <h1 data-aos="fade-up">What is Medi-Bot</h1>
+                <h2 data-aos="fade-up" data-aos-delay="400">
+                    Medi-Bot is a system can be expected for a better solution for people healthy 
+                    eating habits. Due to busy lifestyle healthy eating habits are overlooked. With this
+                    unhealthy eating habits, we get health problems. This system provides functionalities to
+                    change their eating behaviorin positive ways.
+                                   </h2>
+                    <div data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-center text-lg-start">
+                        <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                <img src="{{ url_for('static',filename='custom/hero-main.png') }}" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock hero %} {% block main %}
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+
+    <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="content">
+                    <h3>BMI</h3>
+                    <h2>The body mass index (BMI) is that the metric currently in use for outlining anthropometric height and weight 
+                        characteristics in adults and for classifying them into groups.</h2>                    <div class="text-center text-lg-start">
+                        <a href="upload" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                            <span>Check BMI</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                <img src="{{ url_for('static',filename='custom/about.png') }}" class="img-fluid" alt="">
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- End About Section -->
+
+
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <h2>Features</h2>
+            <p>What makes our website unique?</p>
+        </header>
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                <img src="{{ url_for('static',filename='img/features.png') }}" class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+                <div class="row align-self-center gy-4">
+
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                        <div class="feature-box d-flex align-items-center">
+                            <i class="bi bi-check"></i>
+                            <h3>Faster analysis</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                        <div class="feature-box d-flex align-items-center">
+                            <i class="bi bi-check"></i>
+                            <h3>Easy to use</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                        <div class="feature-box d-flex align-items-center">
+                            <i class="bi bi-check"></i>
+                            <h3>Personalized meal plans</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                        <div class="feature-box d-flex align-items-center">
+                            <i class="bi bi-check"></i>
+                            <h3>Health tips</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                        <div class="feature-box d-flex align-items-center">
+                            <i class="bi bi-check"></i>
+                            <h3>Easy to share</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                        <div class="feature-box d-flex align-items-center">
+                            <i class="bi bi-check"></i>
+                            <h3>Accurate results</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- / row -->
+
+    </div>
+
+</section>
+<!-- End Features Section -->
+
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <h2>Team</h2>
+            <p>Our hard working team</p>
+        </header>
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ url_for('static',filename='img/team/team-1.jpg') }}" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Shaurya Choudhary</h4>
+                        <span>18BCE2113</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ url_for('static',filename='img/team/team-2.jpg') }}" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Sakshi Gupta</h4>
+                        <span>18BCE2517</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="{{ url_for('static',filename='img/team/team-3.jpg') }}" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Pranav Khurana</h4>
+                        <span>18BCE2513</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- End Team Section -->
+
+
+
+
+
+<!--Chatbot stuff-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' />
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css' />
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='jquery.mCustomScrollbar.min.css') }}" />
+<script src="{{ url_for('static',filename='jquery.mCustomScrollbar.concat.min.js') }}"></script>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='chatBotStyle.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='chatBotStyle1.css') }}">
+
+<div id="chat-bot" onclick="showDiv();">
+    <div class="icon">
+        <div class="user">
+            <i class="fas"></i> Tiamii AI ChatBot
+        </div>
+        <i class="bi bi-chat"></i>
+    </div>
+</div>
+
+
+<div id="chatBox" style="display: none;">
+
+    <section id="avenue-messenger" class="avenue-messenger">
+        <div class="menu">
+        </div>
+        <div class="agent-face">
+                <img class="agent circle" src="https://cliply.co/wp-content/uploads/2019/05/371905140_MEET_ROBOT_400px.gif" alt="Chatbot"/
+                style="margin-top: 70px;"
+                >
+                
+        </div>
+        <div class="chat">
+            
+            <div class="chat-title">
+                <h1>Medi-Care</h1>
+                <h2>AI Chatbot</h2>
+                <!--  <figure class="avatar">
+                      <img src="http://askavenue.com/img/17.jpg" /></figure>-->
+            </div>
+            <div class="messages">
+                <div class="messages-content"></div>
+            </div>
+            <div class="message-box" style="margin-top: 150px;">
+                <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+                <button type="submit" class="message-submit">Send</button>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<script>
+    function showDiv() {
+        var x = document.getElementById("chatBox"); //so we dont have to write doc.get multiple times
+        if (x.style.display === "none") { //check if hidden
+            x.style.display = "block"; //display it
+        } else {
+            x.style.display = "none"; //hide it
+        }
+    }
+
+
+    var $messages = $('.messages-content'),
+        d, h, m,
+        i = 0;
+
+    $(window).load(function() {
+        $messages.mCustomScrollbar();
+        setTimeout(function() {
+            fakeMessage();
+        }, 200);
+    });
+
+
+    function updateScrollbar() {
+        $messages.mCustomScrollbar("update").mCustomScrollbar('scrollTo', 'bottom', {
+            scrollInertia: 10,
+            timeout: 0
+        });
+    }
+
+    function setDate() {
+        d = new Date()
+        if (m != d.getMinutes()) {
+            m = d.getMinutes();
+            $('<div class="timestamp">' + d.getHours() + ':' + m + '</div>').appendTo($('.message:last'));
+            $('<div class="checkmark-sent-delivered">&check;</div>').appendTo($('.message:last'));
+            $('<div class="checkmark-read">&check;</div>').appendTo($('.message:last'));
+        }
+    }
+
+    function insertMessage() {
+        msg = $('.message-input').val();
+        if ($.trim(msg) == '') {
+            return false;
+        }
+        $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
+        setDate();
+        $('.message-input').val(null);
+        updateScrollbar();
+        setTimeout(function() {
+            fakeMessage(msg);
+        }, 200);
+    }
+
+    $('.message-submit').click(function() {
+        insertMessage();
+    });
+
+    $(window).on('keydown', function(e) {
+        if (e.which == 13) {
+            insertMessage();
+            return false;
+        }
+    })
+
+    var Fake = [
+        'Hi there, I\'m Jesse and you?',
+        'Nice to meet you',
+        'How are you?',
+        'Not too bad, thanks',
+        'What do you do?',
+        'That\'s awesome',
+        'Codepen is a nice place to stay',
+        'I think you\'re a nice person',
+        'Why do you think that?',
+        'Can you explain?',
+        'Anyway I\'ve gotta go now',
+        'It was a pleasure chat with you',
+        'Time to make a new codepen',
+        'Bye',
+        ':)'
+    ]
+
+    function fakeMessage(msg) {
+        if ($('.message-input').val() != '') {
+            return false;
+        }
+        $('<div class="message loading new"><figure class="avatar"><img src="static/chatbot_icon.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+        updateScrollbar();
+
+        setTimeout(function() {
+
+            $.ajax({
+                type: "POST",
+                url: "/ask?message=" + msg,
+                data: $(this).serialize(),
+                success: function(response) {
+
+                    $('.message.loading').remove();
+                    $('<div class="message new"><figure class="avatar"><img src="static/chatbot_icon.png" /></figure>' + response.answer + '</div>').appendTo($('.mCSB_container')).addClass('new');
+                    setDate();
+                    updateScrollbar();
+                    i++;
+
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+
+        }, 200);
+
+    }
+
+    $('.button').click(function() {
+        $('.menu .items span').toggleClass('active');
+        $('.menu .button').toggleClass('active');
+    });
+
+
+    const chat_btn = $("#chat-bot .icon");
+    const chat_box = $("#chat-bot .messenger");
+
+    chat_btn.click(() => {
+        chat_btn.toggleClass("expanded");
+        setTimeout(() => {
+            chat_box.toggleClass("expanded");
+        }, 100);
+    });
+</script>
+
+
+
+{% endblock main %}

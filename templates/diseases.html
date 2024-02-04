@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diseases</title>
+        <style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		
+		.disease {
+			display: inline-block;
+			padding:5px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+		
+		.disease:hover {
+			background-color: #f2f2f2;
+		}
+	</style>
+    </head>
+    <body>
+        <p>Click on a disease to copy it to the clipboard:</p>
+        <div class="disease" onclick="copyToClipboard('itching')">Itching</div>
+        <div class="disease" onclick="copyToClipboard('skin_rash')">Skin Rash</div>
+        <div class="disease" onclick="copyToClipboard('nodal_skin_eruptions')">Nodal
+            Skin Eruptions</div>
+        <div class="disease" onclick="copyToClipboard('continuous_sneezing')">Continuous
+            Sneezing</div>
+        <div class="disease" onclick="copyToClipboard('shivering')">Shivering</div>
+        <div class="disease" onclick="copyToClipboard('chills')">Chills</div>
+        <div class="disease" onclick="copyToClipboard('joint_pain')">Joint Pain</div>
+        <div class="disease" onclick="copyToClipboard('stomach_pain')">Stomach
+            Pain</div>
+        <div class="disease" onclick="copyToClipboard('acidity')">Acidity</div>
+        <div class="disease" onclick="copyToClipboard('ulcers_on_tongue')">Ulcers
+            on Tongue</div>
+        <div class="disease" onclick="copyToClipboard('muscle_wasting')">Muscle
+            Wasting</div>
+        <div class="disease" onclick="copyToClipboard('vomiting')">Vomiting</div>
+        <div class="disease" onclick="copyToClipboard('burning_micturition')">Burning
+            Micturition</div>
+        <div class="disease" onclick="copyToClipboard('spotting_ urination')">Spotting
+            Urination</div>
+        <div class="disease" onclick="copyToClipboard('fatigue')">Fatigue</div>
+        <div class="disease" onclick="copyToClipboard('weight_gain')">Weight
+            Gain</div>
+        <div class="disease" onclick="copyToClipboard('anxiety')">Anxiety</div>
+        <div class="disease" onclick="copyToClipboard('cold_hands_and_feets')">Cold
+            Hands and Feet</div>
+        <div class="disease" onclick="copyToClipboard('mood_swings')">Mood
+            Swings</div>
+        <div class="disease" onclick="copyToClipboard('weight_loss')">Weight
+            Loss</div>
+        <div class="disease" onclick="copyToClipboard('restlessness')">Restlessness</div>
+        <div class="disease" onclick="copyToClipboard('lethargy')">Lethargy</div>
+        <div class="disease" onclick="copyToClipboard('patches_in_throat')">Patches
+            in Throat</div>
+        <div class="disease" onclick="copyToClipboard('irregular_sugar_level')">Irregular
+            Sugar Level</div>
+        <div class="disease" onclick="copyToClipboard('cough')">Cough</div>
+        <div class="disease" onclick="copyToClipboard('high_fever')">High Fever</div>
+        <div class="disease" onclick="copyToClipboard('sunken_eyes')">Sunken
+            Eyes</div>
+        <div class="disease" onclick="copyToClipboard('breathlessness')">Breathlessness</div>
+        <div class="disease" onclick="copyToClipboard('sweating')">Sweating</div>
+        <div class="disease" onclick="copyToClipboard('dehydration')">Dehydration</div>
+        <div class="disease" onclick="copyToClipboard('indigestion')">Indigestion</div>
+        <div class="disease" onclick="copyToClipboard('headache')">Headache</div>
+        <div class="disease" onclick="copyToClipboard('yellowish_skin')">Yellowish
+            Skin</div>
+
+
+        <div class="disease" onclick="copyToClipboard('dark_urine')">Dark Urine</div>
+        <div class="disease" onclick="copyToClipboard('nausea')">Nausea</div>
+        <div class="disease" onclick="copyToClipboard('loss_of_appetite')">Loss
+            of Appetite</div>
+        <div class="disease" onclick="copyToClipboard('pain_behind_the_eyes')">Pain
+            behind the Eyes</div>
+        <div class="disease" onclick="copyToClipboard('back_pain')">Back Pain</div>
+        <div class="disease" onclick="copyToClipboard('constipation')">Constipation</div>
+        <div class="disease" onclick="copyToClipboard('abdominal_pain')">Abdominal
+            Pain</div>
+        <div class="disease" onclick="copyToClipboard('diarrhoea')">Diarrhoea</div>
+        <div class="disease" onclick="copyToClipboard('mild_fever')">Mild Fever</div>
+        <div class="disease" onclick="copyToClipboard('yellow_urine')">Yellow
+            Urine</div>
+        <div class="disease" onclick="copyToClipboard('yellowing_of_eyes')">Yellowing
+            of Eyes</div>
+        <div class="disease" onclick="copyToClipboard('acute_liver_failure')">Acute
+            Liver Failure</div>
+        <div class="disease" onclick="copyToClipboard('fluid_overload')">Fluid
+            Overload</div>
+        <div class="disease" onclick="copyToClipboard('swelling_of_stomach')">Swelling
+            of Stomach</div>
+        <div class="disease" onclick="copyToClipboard('swelled_lymph_nodes')">Swelled
+            Lymph Nodes</div>
+        <div class="disease" onclick="copyToClipboard('malaise')">Malaise</div>
+        <div class="disease"
+            onclick="copyToClipboard('blurred_and_distorted_vision')">Blurred
+            and Distorted Vision</div>
+        <div class="disease" onclick="copyToClipboard('phlegm')">Phlegm</div>
+        <div class="disease" onclick="copyToClipboard('throat_irritation')">Throat
+            Irritation</div>
+        <div class="disease" onclick="copyToClipboard('redness_of_eyes')">Redness
+            of Eyes</div>
+        <div class="disease" onclick="copyToClipboard('sinus_pressure')">Sinus
+            Pressure</div>
+        <div class="disease" onclick="copyToClipboard('runny_nose')">Runny Nose</div>
+        <div class="disease" onclick="copyToClipboard('congestion')">Congestion</div>
+        <div class="disease" onclick="copyToClipboard('chest_pain')">Chest Pain</div>
+        <div class="disease" onclick="copyToClipboard('weakness_in_limbs')">Weakness
+            in Limbs</div>
+        <div class="disease" onclick="copyToClipboard('fast_heart_rate')">Fast
+            Heart Rate</div>
+        <div class="disease"
+            onclick="copyToClipboard('pain_during_bowel_movements')">Pain during
+            Bowel Movements</div>
+        <div class="disease" onclick="copyToClipboard('pain_in_anal_region')">Pain
+            in Anal Region</div>
+        <div class="disease" onclick="copyToClipboard('bloody_stool')">Bloody
+            Stool</div>
+        <div class="disease" onclick="copyToClipboard('irritation_in_anus')">Irritation
+            in Anus</div>
+        <div class="disease" onclick="copyToClipboard('neck_pain')">Neck Pain</div>
+        <div class="disease" onclick="copyToClipboard('dizziness')">Dizziness</div>
+        <div class="disease" onclick="copyToClipboard('cramps')">Cramps</div>
+        <div class="disease" onclick="copyToClipboard('bruising')">Bruising</div>
+        <div class="disease" onclick="copyToClipboard('obesity')">Obesity</div>
+        <div class="disease" onclick="copyToClipboard('swollen_legs')">Swollen
+            Legs</div>
+        <div class="disease" onclick="copyToClipboard('swollen_blood_vessels')">Swollen
+            Blood Vessels</div>
+        <div class="disease" onclick="copyToClipboard('puffy_face_and_eyes')">Puffy
+            Face and Eyes</div>
+        <div class="disease" onclick="copyToClipboard('enlarged_thyroid')">Enlarged
+            Thyroid</div>
+        <div class="disease" onclick="copyToClipboard('brittle_nails')">Brittle
+            Nails</div>
+        <div class="disease" onclick="copyToClipboard('swollen_extremeties')">Swollen
+            Extremities</div>
+        <div class="disease" onclick="copyToClipboard('excessive_hunger')">Excessive
+            Hunger</div>
+        <div class="disease"
+            onclick="copyToClipboard('extra_marital_contacts')">Extra Marital
+            Contacts</div>
+        <div class="disease"
+            onclick="copyToClipboard('drying_and_tingling_lips')">Drying and
+            Tingling Lips</div>
+        <div class="disease" onclick="copyToClipboard('slurred_speech')">Slurred
+            Speech</div>
+        <div class="disease" onclick="copyToClipboard('knee_pain')">Knee Pain</div>
+        <div class="disease" onclick="copyToClipboard('hip_joint_pain')">Hip
+            Joint Pain</div>
+        <div class="disease" onclick="copyToClipboard('muscle_weakness')">Muscle
+            Weakness</div>
+        <div class="disease" onclick="copyToClipboard('stiff_neck')">Stiff Neck</div>
+        <div class="disease" onclick="copyToClipboard('swelling_joints')">Swelling
+            Joints</div>
+        <div class="disease" onclick="copyToClipboard('movement_stiffness')">Movement
+            Stiffness</div>
+        <div class="disease" onclick="copyToClipboard('spinning_movements')">Spinning
+            Movements</div>
+        <div class="disease" onclick="copyToClipboard('loss_of_balance')">Loss
+            of Balance</div>
+        <div class="disease" onclick="copyToClipboard('unsteadiness')">Unsteadiness</div>
+        <div class="disease"
+            onclick="copyToClipboard('weakness_of_one_body_side')">Weakness of
+            One Body Side</div>
+        <div class="disease" onclick="copyToClipboard('loss_of_smell')">Loss of
+            Smell</div>
+        <div class="disease" onclick="copyToClipboard('bladder_discomfort')">Bladder
+            Discomfort</div>
+        <div class="disease" onclick="copyToClipboard('foul_smell_of urine')">Foul
+            Smell of Urine</div>
+        <div class="disease"
+            onclick="copyToClipboard('continuous_feel_of_urine')">Continuous
+            Feel of Urine</div>
+        <div class="disease" onclick="copyToClipboard('passage_of_gases')">Passage
+            of Gases</div>
+        <div class="disease" onclick="copyToClipboard('internal_itching')">Internal
+            Itching</div>
+        <div class="disease" onclick="copyToClipboard('toxic_look_(typhos)')">Toxic
+            Look (Typhos)</div>
+        <div class="disease" onclick="copyToClipboard('depression')">Depression</div>
+        <div class="disease" onclick="copyToClipboard('irritability')">Irritability</div>
+        <div class="disease" onclick="copyToClipboard('muscle_pain')">Muscle
+            Pain</div>
+        <div class="disease" onclick="copyToClipboard('altered_sensorium')">Altered
+            Sensorium</div>
+        <div class="disease" onclick="copyToClipboard('red_spots_over_body')">Red
+            Spots over Body</div>
+        <div class="disease" onclick="copyToClipboard('belly_pain')">Belly Pain</div>
+        <div class="disease" onclick="copyToClipboard('abnormal_menstruation')">Abnormal
+            Menstruation</div>
+        <div class="disease" onclick="copyToClipboard('dischromic _patches')">Dischromic
+            Patches</div>
+        <div class="disease" onclick="copyToClipboard('watering_from_eyes')">Watering
+            from Eyes</div>
+        <div class="disease" onclick="copyToClipboard('increased_appetite')">Increased
+            Appetite</div>
+        <div class="disease" onclick="copyToClipboard('polyuria')">Polyuria</div>
+        <div class="disease" onclick="copyToClipboard('family_history')">Family
+            History</div>
+        <div class="disease" onclick="copyToClipboard('mucoid_sputum')">Mucoid
+            Sputum</div>
+        <div class="disease" onclick="copyToClipboard('rusty_sputum')">Rusty
+            Sputum</div>
+        <div class="disease" onclick="copyToClipboard('lack_of_concentration')">Lack
+            of Concentration</div>
+        <div class="disease" onclick="copyToClipboard('visual_disturbances')">Visual
+            Disturbances</div>
+        <div class="disease"
+            onclick="copyToClipboard('receiving_blood_transfusion')">Receiving
+            Blood Transfusion</div>
+        <div class="disease"
+            onclick="copyToClipboard('receiving_unsterile_injections')">Receiving
+            Unsterile Injections</div>
+        <div class="disease" onclick="copyToClipboard('coma')">Coma</div>
+        <div class="disease" onclick="copyToClipboard('stomach_bleeding')">Stomach
+            Bleeding</div>
+        <div class="disease" onclick="copyToClipboard('distention_of_abdomen')">Distention
+            of Abdomen</div>
+        <div class="disease"
+            onclick="copyToClipboard('history_of_alcohol_consumption')">History
+            of Alcohol Consumption</div>
+        <div class="disease" onclick="copyToClipboard('fluid_overload.1')">Fluid
+            Overload.1</div>
+        <div class="disease" onclick="copyToClipboard('blood_in_sputum')">Blood
+            in Sputum</div>
+        <div class="disease"
+            onclick="copyToClipboard('prominent_veins_on_calf')">Prominent Veins
+            on Calf</div>
+        <div class="disease" onclick="copyToClipboard('palpitations')">Palpitations</div>
+        <div class="disease" onclick="copyToClipboard('painful_walking')">Painful
+            Walking</div>
+        <div class="disease" onclick="copyToClipboard('pus_filled_pimples')">Pus-filled
+            Pimples</div>
+        <div class="disease" onclick="copyToClipboard('blackheads')">Blackheads</div>
+        <div class="disease" onclick="copyToClipboard('scurring')">Scurring</div>
+        <div class="disease" onclick="copyToClipboard('skin_peeling')">Skin
+            Peeling</div>
+        <div class="disease" onclick="copyToClipboard('silver_like_dusting')">Silver
+            Like Dusting</div>
+        <div class="disease" onclick="copyToClipboard('small_dents_in_nails')">Small
+            Dents In Nails</div>
+        <div class="disease" onclick="copyToClipboard('inflammatory_nails')">Inflammatory
+            Nails</div>
+        <div class="disease" onclick="copyToClipboard('blister')">Blister</div>
+        <div class="disease" onclick="copyToClipboard('red_sore_around_nose')">Red
+            Sore Around Nose</div>
+        <div class="disease" onclick="copyToClipboard('yellow_crust_ooze')">Yellow
+            Crust Ooze</div>
+
+            <script>
+                function copyToClipboard(text) {
+                  // create a temporary input element
+                  var input = document.createElement("input");
+                  input.setAttribute("type", "text");
+                  input.setAttribute("value", text);
+                  document.body.appendChild(input);
+                
+                  // select the text and copy to clipboard
+                  input.select();
+                  document.execCommand("copy");
+                
+                  // remove the temporary input element
+                  document.body.removeChild(input);
+                
+                  // notify the user
+                  var message = document.createElement("div");
+                  message.innerHTML = "Disease copied to clipboard: " + text;
+                  message.style.cssText = "background-color: #4CAF50; color: white; font-size: 16px; padding: 12px; position: fixed; bottom: 20px; right: 20px; z-index: 9999; opacity: 0; transition: opacity 0.2s ease-in-out;";
+                  document.body.appendChild(message);
+                  setTimeout(function() {
+                    message.style.opacity = 1;
+                  }, 100);
+                  setTimeout(function() {
+                    message.style.opacity = 0;
+                    setTimeout(function() {
+                      document.body.removeChild(message);
+                    }, 200);
+                  }, 2000);
+                }
+                </script>
+                
+    </body>
+</html>
